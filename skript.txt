@@ -1,0 +1,29 @@
+- Warum Fremdschlüssel?
+	-> Datenintegrität
+
+
+
+Normalisierung:
+================
+
+Warum macht man normalisierung?
+- um Redundanzen zu vermeiden
+Warum Redundanzen vermeiden?
+- wegen Anomalien
+	- Insert-Anomalie
+	- Update-Anomalie
+	- Delete-Anomalie
+
+Grundsätzlich reichen die ersten drei normalformen um Anomalien zu vermeiden. 
+
+1) 1. Normalform:
+Jeder Attributwert muss atomar sein. z.B.: Kunde hat mehrere Adressen -> für jede Adresse ein eigener Tabelleneintrag. Die 1. Normalform schließt Redundanz nicht aus!!!
+
+2) 2. Normalform:
+Ist erfüllt, wenn 1. Normalform erfüllt ist und jedes Attribut vom gesamten Primärschlüssel abhängt 
+
+3) 3. Normalform
+Ist erfüllt, wenn 2. Normalform erfüllt ist, ...
+
+
+

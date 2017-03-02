@@ -1,0 +1,8 @@
+1,Moped
+1,Auto
+1,Fahrrad
+2,Haus
+3,Auto
+3,MopedAuto
+4,Scooter
+4,Knie

@@ -1,0 +1,4 @@
+01-01-1998,Donau-Versicherung
+12-12-2000,Tiroler-Versicherung
+04-04-2004,Wiener-Staedtische
+07-07-1997,Generali
