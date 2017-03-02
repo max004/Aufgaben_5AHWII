@@ -1,0 +1,67 @@
+<html>
+	<head>
+		<script>
+		
+			document.onkeydown = function(event) {
+				if (event.keyCode == 13) {
+					document.getElementById("btnsend").click();
+				}
+			}
+		
+			function readData() {
+		
+				var xhttp = new XMLHttpRequest();
+				xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					
+					 document.getElementById("demo").innerHTML = this.responseText;
+					
+						}
+					};
+				xhttp.open("POST", "read_data.php", true);
+				xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+				xhttp.send();
+			}
+			
+			
+			function sendData(){
+		
+				var xhttp = new XMLHttpRequest();
+				xhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					
+						}
+					};
+				xhttp.open("POST", "send_data.php", true);
+				xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+				var  eintrag = document.getElementById("eintrag").value;
+				
+				xhttp.send("eintrag="+eintrag);
+				
+				this.readData();
+				
+			}
+			
+			window.onload = function(){
+			
+			setInterval(readData, 2000);
+			
+			}
+			
+		</script>
+	</head>
+<body>
+<p><u>CHATROOM</u></p>
+
+<button type="button" onclick="readData()">Request data</button>
+<br/>
+<br/>
+Eintrag: <input type="text" id="eintrag" name="eintrag"/>
+<button id="btnsend" onclick="sendData()">Send data</button>
+
+<p id="demo"></p>
+
+</body>
+</html>
