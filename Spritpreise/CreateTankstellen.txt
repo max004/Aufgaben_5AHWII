@@ -1,0 +1,11 @@
+CREATE TABLE IF NOT EXISTS tankstelle(
+tankeNr INT NOT NULL,
+tankeName VARCHAR(50) NOT NULL,
+PRIMARY KEY(tankeNr)
+);
+
+INSERT INTO tankstelle VALUES(1, "EssoDiscount Inzing");
+INSERT INTO tankstelle VALUES(2, "Esso Zirl");
+INSERT INTO tankstelle VALUES(3, "Jet Völs");
+INSERT INTO tankstelle VALUES(4, "OMV Medicent");
+INSERT INTO tankstelle VALUES(5, "Avia Cineplexx");
